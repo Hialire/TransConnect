@@ -1,0 +1,12 @@
+c:\Users\Antoine\OneDrive\Bordel\Documents\GitHub\TransConnect\src\TransConnect.Domain\bin\Debug\net8.0\TransConnect.Domain.deps.json
+c:\Users\Antoine\OneDrive\Bordel\Documents\GitHub\TransConnect\src\TransConnect.Domain\bin\Debug\net8.0\TransConnect.Domain.dll
+c:\Users\Antoine\OneDrive\Bordel\Documents\GitHub\TransConnect\src\TransConnect.Domain\bin\Debug\net8.0\TransConnect.Domain.pdb
+c:\Users\Antoine\OneDrive\Bordel\Documents\GitHub\TransConnect\src\TransConnect.Domain\obj\Debug\net8.0\TransConnect.Domain.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Antoine\OneDrive\Bordel\Documents\GitHub\TransConnect\src\TransConnect.Domain\obj\Debug\net8.0\TransConnect.Domain.AssemblyInfoInputs.cache
+c:\Users\Antoine\OneDrive\Bordel\Documents\GitHub\TransConnect\src\TransConnect.Domain\obj\Debug\net8.0\TransConnect.Domain.AssemblyInfo.cs
+c:\Users\Antoine\OneDrive\Bordel\Documents\GitHub\TransConnect\src\TransConnect.Domain\obj\Debug\net8.0\TransConnect.Domain.csproj.CoreCompileInputs.cache
+c:\Users\Antoine\OneDrive\Bordel\Documents\GitHub\TransConnect\src\TransConnect.Domain\obj\Debug\net8.0\TransConnect.Domain.sourcelink.json
+c:\Users\Antoine\OneDrive\Bordel\Documents\GitHub\TransConnect\src\TransConnect.Domain\obj\Debug\net8.0\TransConnect.Domain.dll
+c:\Users\Antoine\OneDrive\Bordel\Documents\GitHub\TransConnect\src\TransConnect.Domain\obj\Debug\net8.0\refint\TransConnect.Domain.dll
+c:\Users\Antoine\OneDrive\Bordel\Documents\GitHub\TransConnect\src\TransConnect.Domain\obj\Debug\net8.0\TransConnect.Domain.pdb
+c:\Users\Antoine\OneDrive\Bordel\Documents\GitHub\TransConnect\src\TransConnect.Domain\obj\Debug\net8.0\ref\TransConnect.Domain.dll

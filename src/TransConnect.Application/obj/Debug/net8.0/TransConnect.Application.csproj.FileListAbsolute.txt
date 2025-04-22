@@ -1,0 +1,16 @@
+c:\Users\Antoine\OneDrive\Bordel\Documents\GitHub\TransConnect\src\TransConnect.Application\bin\Debug\net8.0\TransConnect.Application.deps.json
+c:\Users\Antoine\OneDrive\Bordel\Documents\GitHub\TransConnect\src\TransConnect.Application\bin\Debug\net8.0\TransConnect.Application.dll
+c:\Users\Antoine\OneDrive\Bordel\Documents\GitHub\TransConnect\src\TransConnect.Application\bin\Debug\net8.0\TransConnect.Application.pdb
+c:\Users\Antoine\OneDrive\Bordel\Documents\GitHub\TransConnect\src\TransConnect.Application\bin\Debug\net8.0\TransConnect.Domain.dll
+c:\Users\Antoine\OneDrive\Bordel\Documents\GitHub\TransConnect\src\TransConnect.Application\bin\Debug\net8.0\TransConnect.Domain.pdb
+c:\Users\Antoine\OneDrive\Bordel\Documents\GitHub\TransConnect\src\TransConnect.Application\obj\Debug\net8.0\TransConnect.Application.csproj.AssemblyReference.cache
+c:\Users\Antoine\OneDrive\Bordel\Documents\GitHub\TransConnect\src\TransConnect.Application\obj\Debug\net8.0\TransConnect.Application.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Antoine\OneDrive\Bordel\Documents\GitHub\TransConnect\src\TransConnect.Application\obj\Debug\net8.0\TransConnect.Application.AssemblyInfoInputs.cache
+c:\Users\Antoine\OneDrive\Bordel\Documents\GitHub\TransConnect\src\TransConnect.Application\obj\Debug\net8.0\TransConnect.Application.AssemblyInfo.cs
+c:\Users\Antoine\OneDrive\Bordel\Documents\GitHub\TransConnect\src\TransConnect.Application\obj\Debug\net8.0\TransConnect.Application.csproj.CoreCompileInputs.cache
+c:\Users\Antoine\OneDrive\Bordel\Documents\GitHub\TransConnect\src\TransConnect.Application\obj\Debug\net8.0\TransConnect.Application.sourcelink.json
+c:\Users\Antoine\OneDrive\Bordel\Documents\GitHub\TransConnect\src\TransConnect.Application\obj\Debug\net8.0\TransCon.AD6D3F67.Up2Date
+c:\Users\Antoine\OneDrive\Bordel\Documents\GitHub\TransConnect\src\TransConnect.Application\obj\Debug\net8.0\TransConnect.Application.dll
+c:\Users\Antoine\OneDrive\Bordel\Documents\GitHub\TransConnect\src\TransConnect.Application\obj\Debug\net8.0\refint\TransConnect.Application.dll
+c:\Users\Antoine\OneDrive\Bordel\Documents\GitHub\TransConnect\src\TransConnect.Application\obj\Debug\net8.0\TransConnect.Application.pdb
+c:\Users\Antoine\OneDrive\Bordel\Documents\GitHub\TransConnect\src\TransConnect.Application\obj\Debug\net8.0\ref\TransConnect.Application.dll
