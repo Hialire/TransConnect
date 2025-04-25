@@ -16,5 +16,7 @@ namespace Transconnect.Services
             get { return montantAchatsCumulés; }
             set { if (value >= 0) montantAchatsCumulés = value; }
         }
+
+        
     }
 }
