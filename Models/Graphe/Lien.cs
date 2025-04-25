@@ -6,66 +6,49 @@ namespace TransConnect.Models.Graphe
     public class Lien
     {
         #region Propriétés
-        Noeud Noeud1 { get; set; }
-        Noeud Noeud2 { get; set; }
+        Noeud noeud1;
+        Noeud noeud2;
         //Pour arbre distance
-        double? Valeur;
+        double? valeur;
         //Null pas d'orientation, true 1-->2, false 2-->1
-        bool? Oriente;
+        bool? oriente;
         #endregion
 
         #region Constructeurs
         public Lien(Noeud noeud1, Noeud noeud2)
         {
-            this.Noeud1 = noeud1;
-            this.Noeud2 = noeud2;
+            this.noeud1 = noeud1;
+            this.noeud2 = noeud2;
         }
         public Lien(Noeud noeud1, Noeud noeud2, double? valeur = null, bool? oriente = null)
         {
-            this.Noeud1 = noeud1;
-            this.Noeud2 = noeud2;
+            this.noeud1 = noeud1;
+            this.noeud2 = noeud2;
             this.Valeur = valeur;
             this.Oriente = oriente;
         }
         #endregion
 
         #region Getters et Setters
-        public Noeud GetNoeud1()
+        public Noeud Noeud1
         {
-            return Noeud1;
+            get { return noeud1; }
+            set { noeud1 = value; }
         }
-        public void SetNoeud1(Noeud noeud1)
+        public Noeud Noeud2
         {
-            Noeud1 = noeud1;
+            get { return noeud2; }
+            set { noeud2 = value; }
         }
-        public Noeud GetNoeud2()
+        public double? Valeur
         {
-            return Noeud2;
+            get { return valeur; }
+            set { valeur = value; }
         }
-        public void SetNoeud2(Noeud noeud2)
+        public bool? Oriente
         {
-            Noeud2 = noeud2;
-        }
-        public double? GetValeur()
-        {
-            return Valeur;
-        }
-        public void SetValeur(double? valeur)
-        {
-            Valeur = valeur;
-        }
-        public bool? GetOriente()
-        {
-            return Oriente;
-        }
-        public void SetOriente(bool? oriente)
-        {
-            Oriente = oriente;
-        }
-        public void SetLiens(Noeud noeud1, Noeud noeud2)
-        {
-            this.Noeud1 = noeud1;
-            this.Noeud2 = noeud2;
+            get { return oriente; }
+            set { oriente = value; }
         }
         #endregion
 
@@ -74,15 +57,15 @@ namespace TransConnect.Models.Graphe
         {
             if (Valeur != null)
             {
-                return $"Lien entre {Noeud1} et {Noeud2} avec une valeur de {Valeur}.";
+                return $"Lien entre {noeud1} et {noeud2} avec une valeur de {Valeur}.";
             }
             else if (Oriente != null)
             {
-                return $"Lien entre {Noeud1} et {Noeud2} / orienté : {(Oriente != true ? $"De {Noeud1} à {Noeud2}" : $"De {Noeud2} à {Noeud1}")}.";
+                return $"Lien entre {noeud1} et {noeud2} / orienté : {(Oriente != true ? $"De {noeud1} à {noeud2}" : $"De {noeud2} à {noeud1}")}.";
             }
             else
             {
-                return $"Lien entre {Noeud1} et {Noeud2}.";
+                return $"Lien entre {noeud1} et {noeud2}.";
             }
         }
         #endregion
