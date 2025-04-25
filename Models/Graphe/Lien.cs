@@ -53,19 +53,19 @@ namespace TransConnect.Models.Graphe
         #endregion
 
         #region Méthodes
-        public string AfficherInfos()
+        public override string ToString()
         {
-            if (Valeur != null)
+            if (valeur != null)
             {
-                return $"Lien entre {noeud1} et {noeud2} avec une valeur de {Valeur}.";
+                return $"Lien entre {noeud1.Id} et {noeud2.Id} avec une valeur de {valeur}.";
             }
-            else if (Oriente != null)
+            else if (oriente != null)
             {
-                return $"Lien entre {noeud1} et {noeud2} / orienté : {(Oriente != true ? $"De {noeud1} à {noeud2}" : $"De {noeud2} à {noeud1}")}.";
+                return $"Lien entre {noeud1.Id} et {noeud2.Id} / orienté : {(oriente != true ? $"De {noeud1.Id} à {noeud2.Id}" : $"De {noeud2.Id} à {noeud1.Id}")}.";
             }
             else
             {
-                return $"Lien entre {noeud1} et {noeud2}.";
+                return $"Lien entre {noeud1.Id} et {noeud2.Id}.";
             }
         }
         #endregion
