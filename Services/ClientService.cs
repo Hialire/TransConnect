@@ -38,7 +38,7 @@ namespace Transconnect.Services
             // Remplissage du Dataframe
             foreach (Client c in ClientList)
             {
-                dfClient.Rows.Add(c.NumeroSS,c.Nom,c.Prenom,c.DateNaissance,c.adressePostale,c.adresseMail,c.Telephone,c.montantAchatsCumulés);
+                dfClient.Rows.Add(c.NumeroSS,c.Nom,c.Prenom,c.DateNaissance,c.AdressePostale,c.AdresseMail,c.Telephone,this.MontantAchatsCumulés);
             }
 
             // Tri par Nom
