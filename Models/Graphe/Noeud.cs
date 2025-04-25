@@ -9,7 +9,7 @@ namespace TransConnect.Models.Graphe
     {
         #region Propriétés
         int id;
-        static int nextId = 0;
+        static int nextId = 1;
         Object entite;
         List<Lien> liens = new List<Lien>();
         #endregion
@@ -19,14 +19,12 @@ namespace TransConnect.Models.Graphe
         {
             this.id = nextId++;
             this.entite = entite;
-            nextId++;
         }
         public Noeud(Object entite, List<Lien> liens)
         {
             this.id = nextId++;
             this.entite = entite;
             this.liens = liens;
-            nextId++;
         }
         #endregion
 

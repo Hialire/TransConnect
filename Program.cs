@@ -1,26 +1,36 @@
-﻿using Mod = TransConnect.Models;
-using Gra = TransConnect.Models.Graphe;
+﻿using System;
+using System.Collections.Generic;
+using TransConnect.Models.Graphe;
+// Créer un graphe avec sa structure
+Noeud paris = new Noeud("Paris");
+Noeud lyon = new Noeud("Lyon");
+Noeud marseille = new Noeud("Marseille");
+Noeud bordeaux = new Noeud("Bordeaux");
 
+// Créer le graphe avec Paris comme racine
+Graphe grapheVilles = new Graphe(paris);
 
-Gra.Noeud n1 = new Gra.Noeud("A");
-Gra.Noeud n2 = new Gra.Noeud("B");
-Gra.Noeud n3 = new Gra.Noeud("C");
-Gra.Noeud n4 = new Gra.Noeud("D");
+// Ajouter les autres noeuds
+grapheVilles.AjouterNoeud(lyon);
+grapheVilles.AjouterNoeud(marseille);
+grapheVilles.AjouterNoeud(bordeaux);
 
+// Créer les liens entre les villes
+Lien parisLyon = new Lien(paris, lyon, 465.0);
+paris.AjouterLien(parisLyon);
+lyon.AjouterLien(parisLyon);
 
-Gra.Lien l1 = new Gra.Lien(n1, n2);
-Gra.Lien l2 = new Gra.Lien(n2, n3);
-Gra.Lien l3 = new Gra.Lien(n1, n3);
+Lien parisMarseille = new Lien(paris, marseille, 775.0);
+paris.AjouterLien(parisMarseille);
+marseille.AjouterLien(parisMarseille);
 
-Gra.Lien l4 = new Gra.Lien(n1, n4,null,true);
-Gra.Lien l5 = new Gra.Lien(n4, n1,null,false);
-Gra.Lien l6 = new Gra.Lien(n4, n2,10);
+Lien parisBordeaux = new Lien(paris, bordeaux, 583.0);
+paris.AjouterLien(parisBordeaux);
+bordeaux.AjouterLien(parisBordeaux);
 
-n1.AddLien(l1,1);
-n1.AddLien(l3,1);
-n1.AddLien(l4,1);
-n1.AddLien(l5,2);
+Lien lyonMarseille = new Lien(lyon, marseille, 315.0);
+lyon.AjouterLien(lyonMarseille);
+marseille.AjouterLien(lyonMarseille);
 
-n2.AddLien(l1,2);
-n2.AddLien(l2,1);
-n2.AddLien(l6,2);
+grapheVilles.AfficherGraphe();
+
