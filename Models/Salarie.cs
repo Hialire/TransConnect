@@ -6,10 +6,10 @@ namespace TransConnect.Models
     public class Salarie : Personne
     {
         #region Propriétés
-        DateTime dateEntree { get; set; }
-        string poste { get; set; }
-        decimal salaire { get; set; }
-        List<Salarie> subordonnes { get; set;} = new List<Salarie>();
+        DateTime dateEntree;
+        string poste;
+        decimal salaire;
+        List<Salarie> subordonnes = new List<Salarie>();
         #endregion
         
         #region Constructeurs
