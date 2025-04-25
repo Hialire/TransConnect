@@ -1,12 +1,26 @@
 ﻿using Mod = TransConnect.Models;
+using Gra = TransConnect.Models.Graphe;
 
 
-Mod.Client client = new Mod.Client("123456789", "Dupont", "Jean", new DateTime(1985, 5, 15), "1 rue de la Paix", "asd@das.fr", "0123456789");
+Gra.Noeud n1 = new Gra.Noeud("A");
+Gra.Noeud n2 = new Gra.Noeud("B");
+Gra.Noeud n3 = new Gra.Noeud("C");
+Gra.Noeud n4 = new Gra.Noeud("D");
 
-Mod.Commande commande1 = new Mod.Commande("Paris", "Lyon", DateTime.Now, 1000);
-Mod.Commande commande2 = new Mod.Commande("Marseille", "Nice", DateTime.Now.AddDays(1), 1500);
 
-client.AddCommande(commande1);
-client.AddCommande(commande2);
+Gra.Lien l1 = new Gra.Lien(n1, n2);
+Gra.Lien l2 = new Gra.Lien(n2, n3);
+Gra.Lien l3 = new Gra.Lien(n1, n3);
 
-Console.WriteLine(client.AfficherHistorique());
+Gra.Lien l4 = new Gra.Lien(n1, n4,null,true);
+Gra.Lien l5 = new Gra.Lien(n4, n1,null,false);
+Gra.Lien l6 = new Gra.Lien(n4, n2,10);
+
+n1.AddLien(l1,1);
+n1.AddLien(l3,1);
+n1.AddLien(l4,1);
+n1.AddLien(l5,2);
+
+n2.AddLien(l1,2);
+n2.AddLien(l2,1);
+n2.AddLien(l6,2);
