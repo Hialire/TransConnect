@@ -14,105 +14,105 @@ namespace TransConnect.Models
     public class Vehicule
     {
         #region Propriétés
-        string Immatriculation;
-        TypeVehicule Type;
-        string Modele;
-        int Capacite;
-        bool EstDisponible = true;
-        string? SpecificiteVehicule;
-        decimal TarifKilometrique;
+        string immatriculation;
+        TypeVehicule type;
+        string modele;
+        int capacite;
+        bool estDisponible = true;
+        string? specificiteVehicule;
+        decimal tarifKilometrique;
         #endregion
         
         #region Constructeurs
         public Vehicule(string immatriculation, TypeVehicule type, string modele, int capacite, decimal tarifKilometrique)
         {
-            Immatriculation = immatriculation;
-            Type = type;
-            Modele = modele;
-            Capacite = capacite;
-            TarifKilometrique = tarifKilometrique;
+            this.immatriculation = immatriculation;
+            this.type = type;
+            this.modele = modele;
+            this.capacite = capacite;
+            this.tarifKilometrique = tarifKilometrique;
         }
         #endregion
 
         #region Getters et Setters
         public string GetImmatriculation()
         {
-            return Immatriculation;
+            return immatriculation;
         }
         public void SetImmatriculation(string immatriculation)
         {
-            Immatriculation = immatriculation;
+            this.immatriculation = immatriculation;
         }
         public TypeVehicule GetTypeV()
         {
-            return Type;
+            return type;
         }
         public void SetTypeV(TypeVehicule type)
         {
-            Type = type;
+            this.type = type;
         }
         public string GetModele()
         {
-            return Modele;
+            return modele;
         }
         public void SetModele(string modele)
         {
-            Modele = modele;
+            this.modele = modele;
         }
         public int GetCapacite()
         {
-            return Capacite;
+            return capacite;
         }
         public void SetCapacite(int capacite)
         {
-            Capacite = capacite;
+            this.capacite = capacite;
         }
         public bool GetEstDisponible()
         {
-            return EstDisponible;
+            return estDisponible;
         }
         public void SetEstDisponible(bool estDisponible)
         {
-            EstDisponible = estDisponible;
+            this.estDisponible = estDisponible;
         }
         public decimal GetTarifKilometrique()
         {
-            return TarifKilometrique;
+            return tarifKilometrique;
         }
         public void SetTarifKilometrique(decimal tarifKilometrique)
         {
-            TarifKilometrique = tarifKilometrique;
+            this.tarifKilometrique = tarifKilometrique;
         }
         public string? GetSpecificiteVehicule()
         {
-            return SpecificiteVehicule;
+            return specificiteVehicule;
         }
         public void SetSpecificiteVehicule(string? specificiteVehicule)
         {
-            SpecificiteVehicule = specificiteVehicule;
+            this.specificiteVehicule = specificiteVehicule;
         }
         #endregion
 
         #region Méthodes
         public string ObtenirDescription()
         {
-            string description = $"{Type} {Modele} - {Immatriculation}";
-            switch (Type)
+            string description = $"{type} {modele} - {immatriculation}";
+            switch (type)
             {
                 case TypeVehicule.Voiture:
-                    description += $" - {Capacite} passagers";
+                    description += $" - {capacite} passagers";
                     break;
                 case TypeVehicule.Camionnette:
-                    description += $" - Usage: {SpecificiteVehicule}";
+                    description += $" - Usage: {specificiteVehicule}";
                     break;
                 case TypeVehicule.CamionCiterne:
-                    description += $" - Matière transportée: {SpecificiteVehicule}";
+                    description += $" - Matière transportée: {specificiteVehicule}";
                     break;
                 case TypeVehicule.CamionBenne:
-                    description += $" - Type: {SpecificiteVehicule}";
+                    description += $" - Type: {specificiteVehicule}";
                     break;
                 case TypeVehicule.CamionFrigorifique:
-                    description += $" - Température: {SpecificiteVehicule}";
+                    description += $" - Température: {specificiteVehicule}";
                     break;
             }
             return description;

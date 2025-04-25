@@ -6,7 +6,7 @@ namespace TransConnect.Models
     public class Client : Personne
     {
         #region Propriétés
-        List<Commande> Commandes { get;set; } = new List<Commande>();
+        List<Commande> commandes = new List<Commande>();
         #endregion
         
         #region Constructeurs
@@ -20,26 +20,26 @@ namespace TransConnect.Models
         #region Getters et Setters
         public List<Commande> GetCommandes()
         {
-            return Commandes;
+            return commandes;
         }
         public void SetCommandes(List<Commande> commandes)
         {
-            Commandes = commandes;
+            this.commandes = commandes;
         }
         public void AddCommande(Commande commande)
         {
-            if (!Commandes.Contains(commande))
+            if (!commandes.Contains(commande))
             {
-                Commandes.Add(commande);
+                commandes.Add(commande);
                 commande.SetClient(this);
             }
         }
 
         public void SupCommande(Commande commande)
         {
-            if (Commandes.Contains(commande))
+            if (commandes.Contains(commande))
             {
-                Commandes.Remove(commande);
+                commandes.Remove(commande);
                 commande.SetClient(null);
             }
         }
@@ -56,7 +56,7 @@ namespace TransConnect.Models
             get
             {
                 decimal total = 0;
-                foreach (var commande in Commandes)
+                foreach (var commande in commandes)
                 {
                     total += commande.GetPrix();
                 }
@@ -66,20 +66,20 @@ namespace TransConnect.Models
 
         public List<Commande> ObtenirHistorique()
         {
-            var historique = new List<Commande>(Commandes);
+            var historique = new List<Commande>(commandes);
             historique.Sort((a, b) => a.GetDate().CompareTo(b.GetDate()));
             return historique;
         }
 
         public override string AfficherInfos()
         {
-            return $"{base.AfficherInfos()} - Nb commandes: {Commandes.Count} - Total: {MontantTotalAchats}€";
+            return $"{base.AfficherInfos()} - Nb commandes: {commandes.Count} - Total: {MontantTotalAchats}€";
         }
 
         public string AfficherHistorique()
         {
-            string infos = $"{base.Nom} {base.Prenom} : Historique des commandes";
-            foreach (var commande in Commandes)
+            string infos = $"{base.nom} {base.prenom} : Historique des commandes";
+            foreach (var commande in commandes)
             {
                 infos += $"\n\t{commande.AfficherInfos()}";
             }

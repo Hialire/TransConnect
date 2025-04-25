@@ -16,125 +16,125 @@ namespace TransConnect.Models
     public class Commande
     {
         #region Propriétés
-        int Id;
+        int id;
         static int nextId;
-        string VilleDepart;
-        string VilleArrivee;
-        DateTime Date;
-        decimal Prix;
-        StatutCommande Statut = StatutCommande.EnAttente;
+        string villeDepart;
+        string villeArrivee;
+        DateTime date;
+        decimal prix;
+        StatutCommande statut = StatutCommande.EnAttente;
 
         
-        Client? Client;
-        Salarie? Chauffeur;
-        Vehicule? Vehicule;
+        Client? client;
+        Salarie? chauffeur;
+        Vehicule? vehicule;
         #endregion
         
         #region Constructeurs
         public Commande(string villeDepart, string villeArrivee, DateTime date,decimal prix)
         {
-            this.Id = nextId;
+            this.id = nextId;
             nextId++;
-            this.VilleDepart = villeDepart;
-            this.VilleArrivee = villeArrivee;
-            this.Date = date;
-            this.Prix = prix;
+            this.villeDepart = villeDepart;
+            this.villeArrivee = villeArrivee;
+            this.date = date;
+            this.prix = prix;
         }
         #endregion
 
         #region Getters et Setters
         public int GetId()
         {
-            return Id;
+            return id;
         }
         public void SetId(int id)
         {
-            Id = id;
+            this.id = id;
         }
         public string GetVilleDepart()
         {
-            return VilleDepart;
+            return villeDepart;
         }
         public void SetVilleDepart(string villeDepart)
         {
-            VilleDepart = villeDepart;
+            this.villeDepart = villeDepart;
         }
         public string GetVilleArrivee()
         {
-            return VilleArrivee;
+            return villeArrivee;
         }
         public void SetVilleArrivee(string villeArrivee)
         {
-            VilleArrivee = villeArrivee;
+            this.villeArrivee = villeArrivee;
         }
         public DateTime GetDate()
         {
-            return Date;
+            return date;
         }
         public void SetDate(DateTime date)
         {
-            Date = date;
+            this.date = date;
         }
         public decimal GetPrix()
         {
-            return Prix;
+            return prix;
         }
         public void SetPrix(decimal prix)
         {
-            Prix = prix;
+            this.prix = prix;
         }
         public StatutCommande GetStatut()
         {
-            return Statut;
+            return statut;
         }
         public void SetStatut(StatutCommande statut)
         {
-            Statut = statut;
+            this.statut = statut;
         }
         public Client? GetClient()
         {
-            return Client;
+            return client;
         }
         public void SetClient(Client? client)
         {
-            Client = client;
+            this.client = client;
         }
         public Salarie? GetChauffeur()
         {
-            return Chauffeur;
+            return chauffeur;
         }
         public void SetChauffeur(Salarie? chauffeur)
         {
-            Chauffeur = chauffeur;
+            this.chauffeur = chauffeur;
         }
         public Vehicule? GetVehicule()
         {
-            return Vehicule;
+            return vehicule;
         }
         public void SetVehicule(Vehicule? vehicule)
         {
-            Vehicule = vehicule;
+            this.vehicule = vehicule;
         }
         #endregion
 
         #region Méthodes
         public bool EstValide()
         {
-            return Client != null && Chauffeur != null && Vehicule != null;
+            return client != null && chauffeur != null && vehicule != null;
         }
         public string AfficherInfos()
         {
-            return $"Commande {Id} : {VilleDepart} -> {VilleArrivee} le {Date.ToShortDateString()} \nPrix: {Prix:C} \nStatut: {Statut}";
+            return $"Commande {id} : {villeDepart} -> {villeArrivee} le {date.ToShortDateString()} \nPrix: {prix:C} \nStatut: {statut}";
         }
         public void ChangerStatut(StatutCommande nouveauStatut)
         {
-            if (Statut == StatutCommande.Annulee)
+            if (statut == StatutCommande.Annulee)
                 throw new InvalidOperationException("Impossible de modifier une commande annulée");
             
-            if (Statut == StatutCommande.Payee && nouveauStatut != StatutCommande.Payee)
+            if (statut == StatutCommande.Payee && nouveauStatut != StatutCommande.Payee)
                 throw new InvalidOperationException("Impossible de modifier une commande déjà payée");
             
-            Statut = nouveauStatut;
+            statut = nouveauStatut;
         }
         #endregion
     }
