@@ -18,20 +18,20 @@ namespace TransConnect.Models
         #endregion
         
         #region Getters et Setters
-        public List<Commande> GetCommandes()
+        public List<Commande> Commandes
         {
-            return commandes;
+            get { return commandes; }
+            set { commandes = value; }
         }
-        public void SetCommandes(List<Commande> commandes)
-        {
-            this.commandes = commandes;
-        }
+        #endregion
+
+        #region Méthodes
         public void AddCommande(Commande commande)
         {
             if (!commandes.Contains(commande))
             {
                 commandes.Add(commande);
-                commande.SetClient(this);
+                commande.Client = this;
             }
         }
 
@@ -40,12 +40,9 @@ namespace TransConnect.Models
             if (commandes.Contains(commande))
             {
                 commandes.Remove(commande);
-                commande.SetClient(null);
+                commande.Client = null;
             }
         }
-        #endregion
-
-        #region Méthodes
         public bool EstBonClient()
         {
             return MontantTotalAchats > 10000;
@@ -58,7 +55,7 @@ namespace TransConnect.Models
                 decimal total = 0;
                 foreach (var commande in commandes)
                 {
-                    total += commande.GetPrix();
+                    total += commande.Prix;
                 }
                 return total;
             }
@@ -67,7 +64,7 @@ namespace TransConnect.Models
         public List<Commande> ObtenirHistorique()
         {
             var historique = new List<Commande>(commandes);
-            historique.Sort((a, b) => a.GetDate().CompareTo(b.GetDate()));
+            historique.Sort((a, b) => a.Date.CompareTo(b.Date));
             return historique;
         }
 

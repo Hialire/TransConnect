@@ -35,61 +35,40 @@ namespace TransConnect.Models
         #endregion
 
         #region Getters et Setters
-        public string GetImmatriculation()
+        public string Immatriculation 
         {
-            return immatriculation;
+            get { return immatriculation; }
+            set { immatriculation = value; }
         }
-        public void SetImmatriculation(string immatriculation)
-        {
-            this.immatriculation = immatriculation;
+        public TypeVehicule Type 
+        { 
+            get { return type; } 
+            set { type = value; } 
         }
-        public TypeVehicule GetTypeV()
-        {
-            return type;
+        public string Modele 
+        { 
+            get { return modele; } 
+            set { modele = value; } 
         }
-        public void SetTypeV(TypeVehicule type)
-        {
-            this.type = type;
+        public int Capacite 
+        { 
+            get { return capacite; } 
+            set { capacite = value; } 
         }
-        public string GetModele()
-        {
-            return modele;
+        public bool EstDisponible 
+        { 
+            get { return estDisponible; } 
+            set { estDisponible = value; } 
         }
-        public void SetModele(string modele)
-        {
-            this.modele = modele;
+        public decimal TarifKilometrique 
+        { 
+            get { return tarifKilometrique; } 
+            set { tarifKilometrique = value; } 
         }
-        public int GetCapacite()
-        {
-            return capacite;
-        }
-        public void SetCapacite(int capacite)
-        {
-            this.capacite = capacite;
-        }
-        public bool GetEstDisponible()
-        {
-            return estDisponible;
-        }
-        public void SetEstDisponible(bool estDisponible)
-        {
-            this.estDisponible = estDisponible;
-        }
-        public decimal GetTarifKilometrique()
-        {
-            return tarifKilometrique;
-        }
-        public void SetTarifKilometrique(decimal tarifKilometrique)
-        {
-            this.tarifKilometrique = tarifKilometrique;
-        }
-        public string? GetSpecificiteVehicule()
-        {
-            return specificiteVehicule;
-        }
-        public void SetSpecificiteVehicule(string? specificiteVehicule)
-        {
-            this.specificiteVehicule = specificiteVehicule;
+        public string? SpecificiteVehicule 
+        { 
+            get { return specificiteVehicule; } 
+            set { specificiteVehicule = value; } 
         }
         #endregion
 

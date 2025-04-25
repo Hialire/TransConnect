@@ -43,77 +43,54 @@ namespace TransConnect.Models
         #endregion
 
         #region Getters et Setters
-        public int GetId()
+        public int Id 
         {
-            return id;
+            get { return id; }
         }
-        public void SetId(int id)
+        public static int NextId 
         {
-            this.id = id;
+            get { return nextId; }
+            set { nextId = value; }
         }
-        public string GetVilleDepart()
-        {
-            return villeDepart;
+        public string VilleDepart 
+        { 
+            get { return villeDepart; } 
+            set { villeDepart = value; } 
         }
-        public void SetVilleDepart(string villeDepart)
-        {
-            this.villeDepart = villeDepart;
+        public string VilleArrivee 
+        { 
+            get { return villeArrivee; } 
+            set { villeArrivee = value; } 
         }
-        public string GetVilleArrivee()
-        {
-            return villeArrivee;
+        public DateTime Date 
+        { 
+            get { return date; } 
+            set { date = value; } 
         }
-        public void SetVilleArrivee(string villeArrivee)
-        {
-            this.villeArrivee = villeArrivee;
+        public decimal Prix 
+        { 
+            get { return prix; } 
+            set { prix = value; } 
         }
-        public DateTime GetDate()
-        {
-            return date;
+        public StatutCommande Statut 
+        { 
+            get { return statut; } 
+            set { statut = value; } 
         }
-        public void SetDate(DateTime date)
-        {
-            this.date = date;
+        public Client? Client 
+        { 
+            get { return client; } 
+            set { client = value; } 
         }
-        public decimal GetPrix()
-        {
-            return prix;
+        public Salarie? Chauffeur 
+        { 
+            get { return chauffeur; } 
+            set { chauffeur = value; } 
         }
-        public void SetPrix(decimal prix)
-        {
-            this.prix = prix;
-        }
-        public StatutCommande GetStatut()
-        {
-            return statut;
-        }
-        public void SetStatut(StatutCommande statut)
-        {
-            this.statut = statut;
-        }
-        public Client? GetClient()
-        {
-            return client;
-        }
-        public void SetClient(Client? client)
-        {
-            this.client = client;
-        }
-        public Salarie? GetChauffeur()
-        {
-            return chauffeur;
-        }
-        public void SetChauffeur(Salarie? chauffeur)
-        {
-            this.chauffeur = chauffeur;
-        }
-        public Vehicule? GetVehicule()
-        {
-            return vehicule;
-        }
-        public void SetVehicule(Vehicule? vehicule)
-        {
-            this.vehicule = vehicule;
+        public Vehicule? Vehicule 
+        { 
+            get { return vehicule; } 
+            set { vehicule = value; } 
         }
         #endregion
 
