@@ -33,4 +33,5 @@ lyon.AjouterLien(lyonMarseille);
 marseille.AjouterLien(lyonMarseille);
 
 grapheVilles.AfficherGraphe();
+Console.Write("test");
 
